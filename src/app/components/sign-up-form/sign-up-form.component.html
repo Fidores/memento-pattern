@@ -1,0 +1,60 @@
+<form class="signup" [formGroup]="signUpForm">
+	<table class="full-width" cellspacing="0">
+		<tr>
+			<td>
+				<mat-form-field appearance="outline" class="full-width">
+					<mat-label>Imię</mat-label>
+					<input
+						matInput
+						type="text"
+						placeholder="Podaj swoje imię"
+						formControlName="name"
+					/>
+				</mat-form-field>
+			</td>
+
+			<td>
+				<mat-form-field appearance="outline" class="full-width">
+					<mat-label>Nazwisko</mat-label>
+					<input
+						matInput
+						type="text"
+						placeholder="Podaj swoje nazwisko"
+						formControlName="lastName"
+					/>
+				</mat-form-field>
+			</td>
+		</tr>
+	</table>
+
+	<mat-form-field appearance="outline" class="full-width">
+		<mat-label>Adres</mat-label>
+		<input
+			matInput
+			formControlName="address"
+			type="text"
+			placeholder="Podaj swój adres"
+		/>
+	</mat-form-field>
+
+	<label for="gender-choice">Podaj płeć</label>
+
+	<mat-radio-group
+		class="radio-group"
+		name="gender"
+		id="gender-choice"
+		formControlName="gender"
+	>
+		<mat-radio-button class="example-radio-button" value="male">
+			Mężczyzna
+		</mat-radio-button>
+
+		<mat-radio-button class="example-radio-button" value="female">
+			Kobieta
+		</mat-radio-button>
+
+		<mat-radio-button class="example-radio-button" value="not-provided">
+			Wolę nie podawać
+		</mat-radio-button>
+	</mat-radio-group>
+</form>
